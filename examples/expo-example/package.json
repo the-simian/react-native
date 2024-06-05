@@ -1,13 +1,13 @@
 {
   "name": "expo-example",
-  "version": "7.6.19",
+  "version": "7.6.20",
   "private": true,
   "main": "index.js",
   "scripts": {
     "android": "STORYBOOK_ENABLED=true expo start --android",
     "ios": "STORYBOOK_ENABLED=true expo start --ios",
     "web": "STORYBOOK_ENABLED=true expo start --web",
-    "storybook": "STORYBOOK_ENABLED=true expo start",
+    "storybook:mobile": "STORYBOOK_ENABLED=true expo start",
     "storybook:web": "storybook dev -p 6006 -c ./.storybook-web",
     "build-web-storybook": "storybook build -c ./.storybook-web",
     "storybook-getstories": "sb-rn-get-stories --config-path=./.storybook --v6-store",
@@ -21,9 +21,9 @@
     "test:ci": "jest --runInBand"
   },
   "dependencies": {
-    "@expo/metro-runtime": "^3.1.1",
+    "@expo/metro-runtime": "~3.1.3",
     "@react-native-async-storage/async-storage": "1.21.0",
-    "@react-native-community/datetimepicker": "7.6.1",
+    "@react-native-community/datetimepicker": "7.7.0",
     "@react-native-community/slider": "4.4.2",
     "@storybook/addon-essentials": "^7.6.13",
     "@storybook/addon-interactions": "^7.6.13",
@@ -49,24 +49,28 @@
     "querystring": "^0.2.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-native": "0.73.2",
+    "react-native": "0.73.6",
     "react-native-safe-area-context": "4.8.2",
     "react-native-web": "~0.19.6",
     "storybook": "^7.6.13",
     "ws": "^8.16.0"
   },
+  "resolutions": {
+    "react": "18.2.0"
+  },
   "devDependencies": {
     "@babel/core": "^7.19.3",
     "@babel/plugin-proposal-export-namespace-from": "^7.18.9",
     "@react-native/babel-preset": "^0.74.0",
-    "@testing-library/react-native": "12.4.3",
-    "@types/react": "~18.2.14",
-    "@types/react-test-renderer": "18.0.7",
+    "@testing-library/react-native": "12.5.1",
+    "@types/react": "~18.2.45",
+    "@types/react-test-renderer": "^18.0.7",
     "@types/ws": "^8.5.10",
     "babel-plugin-react-docgen-typescript": "^1.5.1",
     "jest": "29.7.0",
-    "jest-expo": "50.0.1",
+    "jest-expo": "~50.0.4",
     "metro-react-native-babel-preset": "^0.77.0",
+    "react-test-renderer": "18.2.0",
     "ts-node": "^10.9.1",
     "typescript": "^5.3.3"
   },
